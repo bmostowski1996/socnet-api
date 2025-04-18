@@ -20,7 +20,7 @@ This is an API for a social network framework featuring "Users", who can post "T
 after cloning the repo, use `npm run build` to build the .ts code and `npm run start` to run the server.
 
 ## Usage 
-I will describe usage in the context of integrating a front-end on top of this back-end. In this case, refer to the controllers folder for API definitions and refer to the routes folder to understand how to access the routes. 
+I will describe usage in the context of integrating a front-end on top of this back-end. In this case, refer to the controllers folder for API definitions and refer to the routes folder to understand how to access the routes. See the walkthrough video posted [here](https://drive.google.com/file/d/1N0DLwajBGAk-CWPBHBZiR16QSBbW-DpQ/view?usp=sharing) for more details.
 
 ## Contribution Guidelines 
 No special guidelines
