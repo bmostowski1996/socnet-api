@@ -14,6 +14,7 @@ interface IUser extends Document {
   email: string;
   thoughts: ObjectId[];
   friends: ObjectId[];
+  _id: Schema.Types.ObjectId;
 };
 
 // Next, let's create the schema
@@ -59,7 +60,7 @@ const userSchema = new Schema<IUser>(
 userSchema
     .virtual('friendCount')
     .get(function (this: IUser) {
-        return this.friends.length;
+        return this.friends?.length;
     });
 
 const User = model('user', userSchema);

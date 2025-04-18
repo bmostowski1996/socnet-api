@@ -4,12 +4,12 @@
 // Define Mongoose
 import { Schema, model, Document, ObjectId, Types } from 'mongoose';
 
-interface IReaction extends Document {
+export interface IReaction extends Document {
     reactionId: ObjectId,
     reactionBody: string,
     username: ObjectId, 
     createdAt: Date
-}
+};
 
 // The notation I<item> should be understood as "interface <item>"
 interface IThought extends Document {
@@ -17,6 +17,7 @@ interface IThought extends Document {
     createdAt: Date;
     username: ObjectId; // Needs to refer to User model
     reactions: IReaction[]; // I need to clarify the type later on down the line...
+    _id: Schema.Types.ObjectId;
 };
 
 // Create the reaction schema
@@ -57,7 +58,7 @@ const thoughtSchema = new Schema<IThought>(
 
 thoughtSchema.virtual('reactionCount')
     .get(function (this: IThought) {
-        return this.reactions.length;
+        return this.reactions?.length;
     });
 
 const Thought = model('thought', thoughtSchema);

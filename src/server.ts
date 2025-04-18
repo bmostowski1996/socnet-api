@@ -2,6 +2,9 @@ import express from 'express';
 import db from './config/connection.js';
 import routes from './routes/index.js';
 
+import './models/Thought.js';  // Registers the Thought model globally
+import './models/User.js';     // Registers the User model
+
 const cwd = process.cwd();
 
 const PORT = 3001;
