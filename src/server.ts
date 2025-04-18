@@ -16,7 +16,7 @@ const activity = cwd.includes('socnet-api')
   : cwd;
 
 app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+app.use(express.json());~
 app.use(routes);
 
 db.once('open', () => {
