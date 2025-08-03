@@ -11,7 +11,7 @@
 - [Questions](#questions)
 
 ## License 
-This project is licensed using MIT
+This project is licensed using the MIT License
 
 ## Project Description 
 This is an API for a social network framework featuring "Users", who can post "Thoughts". Other users can post "Reactions" to those thoughts.
